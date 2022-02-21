@@ -12,24 +12,21 @@ const ProfilePhotographer = ({ photographers, medias }) => {
     calcLikes();
 
     return (
-        <div>
-            <section>
-            <ProfileDisplayInfo
-                photographer = {photographer}
-                likes = {allLikes}
+      <div>
+        <section>
+          <ProfileDisplayInfo photographer={photographer} likes={allLikes} />
+        </section>
+        <section className="grid items-center md:grid-cols-4 xs:grid-cols-1 gap-5 justify-items-center	 ">
+          {matchMedias.map(photo => (
+            <ProfileDisplayPhotos
+              key={photo.id}
+              photo={photo}
+              photographer={photographer}
             />
-            </section>
-            <section className='grid grid-cols-4 gap-5 '>        
-                {matchMedias.map(photo => (
-                    <ProfileDisplayPhotos                
-                        key={photo.id}
-                        photo={photo}
-                        photographer = {photographer}
-                    />
-            ))}
-            </section>             
-        </div>
-    )
+          ))}
+        </section>
+      </div>
+    );
 }
 
 export default ProfilePhotographer

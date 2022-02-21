@@ -62,23 +62,12 @@ const App = () => {
 
   const onFilterRemove = () => setPhotographersDisplay(photographers);
 
-  if (isLoading) {
-    return (
-      <div>
-        <h1>Fisheye</h1>
-        <h3>is loading</h3>
-      </div>
-    );
-  }
-
-  if (isErr) {
-    return <div>Huston, we got an Error</div>;
-  }
-
-  return (
+  return isErr ? (
+    <div>Huston, we got an Error</div>
+  ) : (
     <Router>
       <div
-        className="app w-screen min-h-screen h-fit p-5
+        className="app min-w-full min-h-full h-fit p-5
           flex flex-col items-center "
       >
         <Header
@@ -90,11 +79,13 @@ const App = () => {
           <Route
             path="/"
             element={
-              <section className="grid grid-cols-3 gap-10 mt-15 place-items-center">
-                <PhotographersData
-                  display={photographersDisplay}
-                  mediaLikes={medias}
-                />
+              <section className="grid min-w-screen md:grid-cols-3 xs:grid-cols-1 md:gap-10 xs:gap-5 mt-10 justify-items-center">
+                {!isLoading && (
+                  <PhotographersData
+                    display={photographersDisplay}
+                    mediaLikes={medias}
+                  />
+                )}
               </section>
             }
           />

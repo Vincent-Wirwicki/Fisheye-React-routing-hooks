@@ -10,14 +10,14 @@ const ProfileDisplayPhoto = ({ medias, photographers }) => {
   const { name } = photographer;
 
   return (
-    <article className=" flex  justify-center h-96 w-screen p-5">
-      <div className=" h-96 w-96 mt-5 object-contain">
+    <article className=" flex justify-center h-96 w-screen p-5 md:flex-row xs:flex-col">
+      <div className=" mt-5 object-contain">
         <div className="flex justify-between items-baseline p-2">
-          <h1 className="font-bold text-2xl ">{title}</h1>
           <Link to={`/${nameInUrl}`}>
             <h1 className="font-bold text-sm ">
               {name} <span> x </span>
             </h1>
+            <h1 className="font-bold text-2xl ">{title}</h1>
           </Link>
         </div>
         <img src={image} alt={image} className="object-contain rounded-md " />

@@ -7,7 +7,7 @@ const ProfileDisplayInfo = ({ photographer, likes }) => {
   ));
 
   return (
-    <article className="flex justify-evenly items-center my-24">
+    <article className="flex justify-evenly items-center md:my-24 md:flex-row xs:flex-col xs:my-25">
       <div className="rounded-full border-2 overflow-hidden max-h-36 w-36 my-5 flex justify-center items-center">
         <img src={portrait} alt={portrait} className="scale-150"></img>
       </div>
