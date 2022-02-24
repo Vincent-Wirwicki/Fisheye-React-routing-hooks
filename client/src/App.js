@@ -24,7 +24,6 @@ const App = () => {
   const fetchMedia = async () => {
     const res = await fetch("/media");
     const data = await res.json();
-    console.log(data, "fetch media");
     return data;
   };
 
@@ -33,7 +32,6 @@ const App = () => {
 
     const getPhotographer = async () => {
       const photographersFromServer = await fetchPhotographers();
-
       setPhotographers(photographersFromServer);
       setPhotographersDisplay(photographersFromServer);
     };
@@ -52,7 +50,7 @@ const App = () => {
     }
   }, []);
 
-  const onFilter = (e) => {
+  const onFilter = e => {
     const tagValue = e.target.textContent.substring(1);
     const filterTags = photographers.filter(({ tags }) =>
       tags.includes(tagValue)
@@ -79,7 +77,7 @@ const App = () => {
           <Route
             path="/"
             element={
-              <section className="grid min-w-screen md:grid-cols-3 xs:grid-cols-1 md:gap-10 xs:gap-5 mt-10 justify-items-center">
+              <section className="grid min-w-screen mt-10 justify-items-center md:grid-cols-3  md:gap-10 xs:gap-5 xs:grid-cols-1">
                 {!isLoading && (
                   <PhotographersData
                     display={photographersDisplay}
