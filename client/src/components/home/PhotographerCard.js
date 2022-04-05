@@ -1,17 +1,21 @@
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 
 const PhotographerCard = ({ photographer, mediaLikes }) => {
   const { id, country, name, city, tagline, price, tags, portrait } =
     photographer;
+
   let allLikes = 0;
+
   const tagPhotographer = tags.map((tag, index) => (
     <p className="mr-3" key={index}>
       #{tag}
     </p>
   ));
+
   const matchId = mediaLikes.filter(
     ({ photographerId }) => photographerId === id
   );
+
   const calcLikes = () => matchId.map(({ likes }) => (allLikes += likes));
   calcLikes();
 
@@ -38,5 +42,4 @@ const PhotographerCard = ({ photographer, mediaLikes }) => {
   );
 };
 
-export default PhotographerCard
-
+export default PhotographerCard;

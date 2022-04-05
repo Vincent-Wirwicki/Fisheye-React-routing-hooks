@@ -1,11 +1,9 @@
 import { useParams, Link } from "react-router-dom";
 
-const ProfileDisplayPhoto = ({ medias, photographers }) => {
+const ProfilePhoto = ({ medias, photographers }) => {
   const { photoTitle, nameInUrl } = useParams();
-
   const photographer = photographers.find(({ name }) => name === nameInUrl);
   const photo = medias.find(({ title }) => title === photoTitle);
-
   const { title, tags, likes, price, image } = photo;
   const { name } = photographer;
 
@@ -35,4 +33,4 @@ const ProfileDisplayPhoto = ({ medias, photographers }) => {
   );
 };
 
-export default ProfileDisplayPhoto;
+export default ProfilePhoto;
