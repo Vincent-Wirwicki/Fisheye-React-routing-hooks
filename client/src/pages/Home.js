@@ -1,5 +1,5 @@
-import Navigation from "../navigation/Navigation";
-import PhotographerCard from "./PhotographerCard";
+import Navigation from "../components/navigation/Navigation";
+import PhotographerCard from "../components/home/PhotographerCard";
 import { useState } from "react";
 
 const Home = ({ photographers, medias }) => {

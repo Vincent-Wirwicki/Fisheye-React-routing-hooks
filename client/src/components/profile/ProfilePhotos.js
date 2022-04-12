@@ -10,7 +10,7 @@ const ProfilePhotos = ({ photo }) => {
     <article className="flex flex-col justify-evenly p-2 mt-20">
       <Link to={`/${nameInUrl}/${title}`}>
         <div className="h-36 w-36 max-h-60 overflow-hidden rounded-md flex justify-center items-center">
-          <img src={image} alt={`${image}`} className="object-contains" />
+          <img src={image} alt={image} className="object-contains" />
         </div>
       </Link>
       <div className="mt-2">

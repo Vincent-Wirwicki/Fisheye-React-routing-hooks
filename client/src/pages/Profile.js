@@ -1,9 +1,9 @@
 import { useParams } from "react-router-dom";
 import { useState } from "react";
 
-import Navigation from "../navigation/Navigation";
-import ProfileInfo from "./ProfileInfo";
-import ProfilePhotos from "./ProfilePhotos";
+import Navigation from "../components/navigation/Navigation";
+import ProfileInfo from "../components/profile/ProfileInfo";
+import ProfilePhotos from "../components/profile/ProfilePhotos";
 
 const Profile = ({ photographers, medias }) => {
   const { nameInUrl } = useParams();
