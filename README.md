@@ -1,6 +1,6 @@
 # Fisheye-React-router-dom
 My get starting project with React
-This my first react project. It features : hooks, props, routing, and nested routes.
+This my first react project. It features : hooks, props, routing, and nested routes.  
 I use [Tailwind](https://tailwindcss.com/) for styling. I also have a [nextJs](https://github.com/Vincent-Wirwicki/Fisheye-fromReact-toNext) version of this project.
 
 ![image](https://user-images.githubusercontent.com/98763680/163030457-04d23e14-6fdd-4309-a87d-470b6a1b8dab.png)
@@ -21,9 +21,9 @@ Header :
 
 Home :
 
-  - Display all photographers.
-  - Calc all likes from their photos.
-  - Click on photographer's name to access his/her profile and photos.  
+  - Display all photographers
+  - Calc all likes from their photos
+  - Click on photographer's name to access his/her profile and photos  
 
 Profile :
 
