@@ -31,7 +31,6 @@ const useFetch = () => {
       setLoading(false);
     }
   }, []);
-  console.log(dataMedia, dataPhotographers);
   return [dataPhotographers, dataMedia, error, loading];
 };
 
