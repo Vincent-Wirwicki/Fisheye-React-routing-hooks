@@ -11,7 +11,7 @@ I use [Tailwind](https://tailwindcss.com/) for styling. I also have a [nextJs](h
 ## Features
 
 Custom hooks : 
-  -useEffect to fetch data
+  - useEffect to fetch data
 
 Header :
 
