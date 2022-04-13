@@ -28,7 +28,6 @@ Home :
 Profile :
 
   - Match photographer data and media with id using useParams from react-router-dom
-  - Nested route if you click on one photo
 
 Photo :
 
